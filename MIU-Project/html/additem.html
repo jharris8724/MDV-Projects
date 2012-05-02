@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Project Name: Web App Part 3 -->
+<!-- Student Name: Jeffrey Harris -->
+<!-- Term Number: 1204 -->
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Add Beer Info"/>
+		<meta name="keywords" content="beer list, organizer, beer app"/>
+		<meta name="robots" content="noindex, nofollow"/>
+		<meta name="viewport" content="user-scalable=no, width=device-width"/>
+		<meta name="viewport" content="target-densitydpi=devicedpi"/>
+		<meta name="HandheldFriendly" content="True"/>
+		<meta name="MobileOptimized" content="320"/>
+		<link rel="stylesheet" type="text/css" href="additemstyle.css"/>
+		<title>Brew Book</title>
+	</head>
+	<body>
+		<!-- App Name -->
+		<header><h1>Brew Book</h1></header>
+		<!-- links that will display and clear the data saved in local storage. -->
+		<nav>
+			<a href="#" id="displayLink">Display Stored Data</a>
+			<a href="#" id="clearLink">Clear Stored Data</a>
+			<a href="additem.html" id="addNewLink" style="display:none;">Add New Brew</a>
+		</nav>
+		<form action="#" method="post" id="beerForm">
+			<fieldset id="beerFieldset">
+				<legend>Beer Information</legend>
+				<ul id="errors"></ul>
+				<!-- this list obtains information regarding the style of beer, the name of the beer, the name of the brewery, alcohol content (in percent), a favorites checkbox, the date the beer was drunk, and any additional information or comments the user wishes to make -->
+				<ul id="beerInfo">
+					<li id="select"><label for="beerstyle">Select Beer Style:</label><br/></li>
+					<li><label for="beername">Name of Beer: </label><input type="text" id="beername"/></li>
+					<li><label for="breweryname">Name of Brewery: </label><input type="text" id="breweryname"/></li>
+					<li><label for="alcrange">Alcohol Content (in %): </label><input type="range" id="alcrange"/></li>
+					<li><label for="dateenjoyed">Date Enjoyed (or not): </label><input type="date" min="2000-03-28" max="2100-03-28" id="dateenjoyed" name="startdate">
+					<li><label for="fav">Add to favorites: </label><input type="checkbox" value="Yes" id="fav"/></li>
+					<li><label for="comments">Additional Info or Comments: </label><br/><textarea id="comments"></textarea></li>
+				</ul>
+			</fieldset>
+			<!-- The submit button. -->
+			<div><input type="submit" value="Save Beer" id="submit"/></div>
+		</form>
+		<script src="json.js" type="text/javascript"></script>
+		<script src="main.js" type="text/javascript"></script>
+	</body>
+</html>
